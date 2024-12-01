@@ -1,3 +1,4 @@
+ 
 $(document).ready(function () {
   $(".slider-img").on("click", function (e) {
     e.stopPropagation(); // Empêche la propagation de l'événement au document
@@ -54,9 +55,6 @@ $(document).ready(function () {
     });
   });
 });
-
-
-
 
 
 

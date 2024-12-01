@@ -177,11 +177,11 @@ h5 {
 }
 
 .card {
-  background-image: url(images/pe1.png);
+  background-image: url(Images/pe1.png);
 }
 
 .card2 {
-  background-image: url(images/pe2.png);
+  background-image: url(Images/pe2.png);
 }
 .card:hover, .card2:hover {
   background-position: 80% 20%;
