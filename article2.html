@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evolving Fitness - Costruire Massa Muscolare</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="Images/favicon.ico"/>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet"/>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              krona: ["Krona One", "sans-serif"],
+              myFont: ["myFont", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+<body class=" text-white font-sans leading-relaxed bg-[url(Images/massa.jpg)] bg-no-repeat bg-cover bg-center bg-fixed">
+  <div class="loader absolute w-full z-10 h-full bg-black flex items-center justify-center">
+    <span class="lettera text-blue-800 font-bold tracking-[15px]">L</span>
+    <span class="lettera text-blue-800 font-bold tracking-[15px]">O</span>
+    <span class="lettera text-blue-800 font-bold tracking-[15px]">A</span>
+    <span class="lettera text-blue-800 font-bold tracking-[15px]">D</span>
+    <span class="lettera text-blue-800 font-bold tracking-[15px]">I</span>
+    <span class="lettera text-blue-800 font-bold tracking-[15px]">N</span>
+    <span class="lettera text-blue-800 font-bold tracking-[15px]">G</span>
+    <span class="lettera text-blue-800 font-bold tracking-[15px]">.</span>
+    <span class="lettera text-blue-800 font-bold tracking-[15px]">.</span>
+    <span class="lettera text-blue-800 font-bold tracking-[15px]">.</span>
+  </div>
+  <header class="pb-[70px]">
+    <nav class="flex justify-between h-[70px] bg-black text-white items-center fixed w-full z-50 nav-bar-menu">      
+      <div class="relative w-full h-[70px] flex items-center justify-between md:justify-around">
+        <div class="flex ml-5 md:ml-0 items-center h-[70px]">
+          <img class="size-14 md:size-16  rounded-full cursor-pointer" src="images/Logo1.png" alt="logo sito fitness"/>
+        </div>
+        <div 
+        data-aos="zoom-in" 
+        class="hidden md:flex h-[70px] space-x-10 items-center">
+          <ul class="flex space-x-12">
+            <li class="cursor-pointer hover:text-blue-800 transition-transform ease-out duration-[0.5s] hover:scale-[1.1]">
+              <a class="font-krona text-[10px]" href="index.html">HOME</a>
+            </li>
+            <li class="cursor-pointer hover:text-blue-800 transition-transform ease-out duration-[0.5s] hover:scale-[1.1]">
+              <a class="font-krona text-[10px]" href="chisiamo.html">CHI SIAMO</a>
+            </li>
+            <li class="cursor-pointer hover:text-blue-800 transition-transform ease-out duration-[0.5s] hover:scale-[1.1]">
+              <a class="font-krona text-[10px]" href="corsi.html">CORSI</a>
+            </li>
+            <li class="cursor-pointer hover:text-blue-800 transition-transform ease-out duration-[0.5s] hover:scale-[1.1]">
+              <a class="font-krona text-[10px]" href="blog.html">BLOG</a>
+            </li>
+            <li class="cursor-pointer hover:text-blue-800 transition-transform ease-out duration-[0.5s] hover:scale-[1.1]">
+              <a class="font-krona text-[10px]" href="prodotti.html">PRODOTTI</a>
+            </li>
+            <li class="cursor-pointer hover:text-blue-800 transition-transform ease-out duration-[0.5s] hover:scale-[1.1]">
+              <a class="font-krona text-[10px]" href="contatti.html">CONTATTI</a>
+            </li>
+          </ul>
+        </div>
+        <div class="md:hidden w-12">
+          <button id="menu-button" class="text-blue-600 focus:outline-none z-30 relative transition-transform">
+            <!-- Icon per Hamburger Menu -->
+            <svg id="hamburger-icon" class="w-6 h-6 inline-block absolute -top-5 content-center rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+            <!-- Icon per Close Menu -->
+            <svg id="close-icon" class="w-6 h-6 hidden absolute -top-5 hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <div id="mobile-menu" class="text-white fixed top-0 right-0 min-w-72 h-full bg-blue-900 shadow-xl transform transition-transform duration-[0.4s] ease-out translate-x-full z-10">
+          <ul class="flex flex-col space-y-6 mt-16">
+            <li class="cursor-pointer hover:text-white px-10 py-4 hover:bg-slate-800">
+              <a class="font-krona text-[10px]" href="index.html">HOME</a>
+            </li>
+            <li class="cursor-pointer hover:text-white px-10 py-4 hover:bg-slate-800">
+              <a class="font-krona text-[10px]" href="chisiamo.html">CHI SIAMO</a>
+            </li>
+            <li class="cursor-pointer hover:text-white px-10 py-4 hover:bg-slate-800">
+              <a class="font-krona text-[10px]" href="corsi.html">CORSI</a>
+            </li>
+            <li class="cursor-pointer hover:text-white px-10 py-4 hover:bg-slate-800">
+              <a class="font-krona text-[10px]" href="blog.html">BLOG</a>
+            </li>
+            <li class="cursor-pointer hover:text-white px-10 py-4 hover:bg-slate-800">
+              <a class="font-krona text-[10px]" href="prodotti.html">PRODOTTI</a>
+            </li>
+            <li class="cursor-pointer hover:text-white px-10 py-4 hover:bg-slate-800">
+              <a class="font-krona text-[10px]" href="contatti.html">CONTATTI</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <section 
+  data-aos="zoom-in"
+  class="bg-neutral-800 h-48 text-white py-12 px-4 text-center">
+    <h1 class="text-4xl font-extrabold">Costruire Massa Muscolare</h1>
+    <p class="mt-4 text-lg">Il tuo piano per guadagnare muscoli e forza, passo dopo passo.</p>
+  </section>
+  <main>
+    <section 
+    data-aos="fade-up"
+    data-aos-duration="1500"
+    class="max-w-5xl mx-auto my-20 p-6 shadow-lg rounded-lg">
+      <h2 class="text-3xl font-bold text-center text-pink-300 mb-6">Perché è Importante la Presa di Massa?</h2>
+      <p class="text-white text-justify">
+        La fase di presa di massa è cruciale per chiunque voglia aumentare il proprio volume muscolare. È un processo che 
+        richiede un equilibrio tra allenamento efficace, alimentazione bilanciata e un recupero di qualità. Ma come puoi ottimizzare questi elementi?
+      </p>
+    </section>
+    <section class="max-w-7xl mx-auto my-20 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div 
+      data-aos="fade-right"
+      data-aos-offset="300"
+      data-aos-easing="ease-in-sine"
+      class="p-6 rounded-lg shadow-md">
+        <h3 class="text-b text-2xl font-semibold  bg-neutral-700 p-2 rounded-sm text-pink-300 mb-4">1. Allenamento</h3>
+        <p>
+          Concentrati su esercizi composti come squat, panca e stacchi. Punta su sessioni brevi ma intense, 
+          aumentando gradualmente i carichi per stimolare la crescita muscolare.
+        </p>
+      </div>
+      <div
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      class="p-6 rounded-lg shadow-md">
+        <h3 class="text-b text-2xl font-semibold bg-neutral-700 p-2 rounded-sm text-pink-300  mb-4">2. Alimentazione</h3>
+        <p>
+          Consuma una dieta ipercalorica bilanciata, ricca di proteine magre, carboidrati complessi e grassi sani. 
+          Includi alimenti come pollo, riso integrale, avocado e olio d'oliva.
+        </p>
+      </div>
+      <div
+      data-aos="fade-left"
+      data-aos-offset="300"
+      data-aos-easing="ease-in-sine"
+      class="p-6 rounded-lg shadow-md">
+        <h3 class="text-b text-2xl font-semibold bg-neutral-700 p-2 rounded-sm text-pink-300  mb-4">3. Riposo</h3>
+        <p>
+          Dormi almeno 7-8 ore per notte per favorire il recupero muscolare. Pianifica giorni di riposo attivo per evitare il sovrallenamento.
+        </p>
+      </div>
+    </section>
+    <section 
+    data-aos="fade-up"
+    data-aos-duration="1500"
+    class="relative overflow-hidden rounded-lg my-12 mx-auto border max-w-5xl">
+      <img 
+        src="Images/article2.jpg" 
+        alt="Muscoli in costruzione" 
+        class="image-articolo2 w-full h-[400px] object-cover rounded-lg shadow-lg hover:scale-110"
+      >
+      <p class="absolute bottom-4 right-4 bg-white px-4 py-2 rounded-md shadow-md text-gray-800 font-medium">
+        "La costanza è la chiave per costruire la forza."
+      </p>
+    </section>
+    <section class="max-w-5xl mx-auto my-20 px-6 py-10 rounded-lg shadow-lg">
+      <h2 
+      data-aos="fade-up"
+      data-aos-duration="500"
+      class="text-3xl font-bold text-center mb-14 text-pink-300">Consigli Pratici</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div
+        data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
+        class="p-4 bg-orange-100 rounded shadow">
+          <h3 class="text-b text-black font-bold mb-2">Monitora i Progressi</h3>
+          <p class="text-black">Usa un diario per annotare i tuoi pesi, ripetizioni e variazioni di peso corporeo.</p>
+        </div>
+        <div
+        data-aos="fade-left"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
+        class="p-4 bg-orange-100 rounded shadow">
+          <h3 class="text-b text-black font-bold mb-2">Non Trascurare il Riscaldamento</h3>
+          <p class="text-black">Preparati adeguatamente con esercizi di mobilità e stretching dinamico prima di ogni sessione.</p>
+        </div>
+        <div
+        data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
+        class="p-4 bg-orange-100 rounded shadow">
+          <h3 class="text-b text-black font-bold mb-2">Integra in Modo Intelligente</h3>
+          <p class="text-black">Considera integratori come proteine del siero di latte o creatina, ma solo se necessari.</p>
+        </div>
+        <div
+        data-aos="fade-left"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
+        class="p-4 bg-orange-100 rounded shadow">
+          <h3 class="text-b text-black font-bold mb-2">Idratazione</h3>
+          <p class="text-black">Bevi almeno 2 litri d'acqua al giorno, specialmente durante le sessioni intense.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="flex text-black flex-col bg-[#E8EDDF]">
+    <div 
+    data-aos="fade-down"
+    data-aos-easing="linear"
+    data-aos-duration="1500"
+    class="relative pt-5 overflow-hidden">
+      <img class="absolute w-[600px] md:w-[430px] xl:w-[700px] bottom-0 -right-20" src="Images/footer.png" alt="">
+      <img class="size-16 mb-20 mt-20 rounded-full mx-10" src="Images/Logo1.png" alt="" />
+      <div class="mb-20 px-10">
+        <span class="font-krona text-[9px]">
+          <a class="font-semibold" href="index.html">EVOLVING-FITNESS.COM</a> / SERVIZIO CLIENTI / NOTE LEGALI E PRIVACY / POLITICA SUI COOKIE
+        </span>
+      </div>
+      <div class="flex flex-col md:grid md:grid-cols-2 gap-y-12 justify-between z-10 mb-20 px-10 lg:flex lg:flex-row">
+        <div class="w-60 lg:w-44 xl:w-60">
+          <span class="hover:font-semibold"><a href="prodotti.html">I NOSTRI PRODOTTI</a></span>
+          <ul class="mt-5 font-semibold text-sm hover:font-extrabold">
+            <li><a href="index.html">EVOLVING FITNESS</a></li>
+          </ul>
+        </div>
+        <div class="w-80 xl:w-80">
+          <span>INFORMAZIONI AZIENDALI</span>
+          <ul class="mt-5 font-semibold text-sm leading-7">
+            <li class="hover:font-extrabold">
+              <a href="">LAVORA CON EVOLVING FITNESS</a>
+            </li>
+            <li class="hover:font-extrabold">
+              <a href="chisiamo.html">SUL GRUPPO EVOLVING FITNESS</a>
+            </li>
+            <li class="hover:font-extrabold">
+              <a href="">SOSTENIBILITÀ DEL GRUPPO EVOLVING FITNESS</a>
+            </li>
+            <li class="hover:font-extrabold">
+              <a href="">MATERIALI STAMPA</a>
+            </li>
+            <li class="hover:font-extrabold">
+              <a href="">RELAZIONI CON GLI INVESTITORI</a>
+            </li>
+            <li class="hover:font-extrabold">
+              <a href="">GOVERNANCE AZIENDALE</a>
+            </li>
+          </ul>
+        </div>
+        <div class="w-64 z-10 lg:w-60 xl:w-64">
+          <span>AIUTO</span>
+          <ul class="mt-5 font-semibold text-sm leading-7">
+            <li class="hover:font-extrabold">
+              <a href="contatti.html">SERVIZIO CLIENTI</a>
+            </li>
+            <li class="hover:font-extrabold">
+              <a href="contatti.html">TROVA IL NOSTRO NEGOZIO</a>
+            </li>
+            <li class="hover:font-extrabold">
+              <a href="">NOTE LEGALI E PRIVACY</a>
+            </li>
+            <li class="hover:font-extrabold">
+              <a href="">CARTA REGALO</a>
+            </li>
+            <li class="hover:font-extrabold">
+              <a href="">POLITICA SUI COOKIE</a>
+            </li>
+            <li class="hover:font-extrabold">
+              <a href="">IMPOSTAZIONI DEI COOKIE</a>
+            </li>
+          </ul>
+        </div>
+        <div class="w-60 bg-[#CFDBD5] z-10 shadow-2xl flex flex-col p-5 rounded-lg lg:w-60 xl:w-72">
+          <span class="hover:font-semibold"><a href="contatti.html">ISCRIVITI ORA</a></span>
+          <p class="mt-5 mb-5">
+            Offerta di benvenuto: 10% di sconto + una sessione gratuita con un coach!
+          </p>
+          <a class="font-semibold hover:font-extrabold" href="contatti.html">SCOPRI DI PIÙ</a>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col justify-between text-center h-28 md:h-24 py-5 gap-2 items-center bg-[#333533] text-white px-10 lg:flex-row lg:justify-between">
+      <div>
+        <p class="text-[10px] lg:text-[12px]">
+          Il contenuto di questo sito web è protetto da copyright ed è di proprietà di Franck Emmanuel N.D. 2024
+        </p>
+      </div>
+      <div class="flex gap-6">
+        <img class="size-5 cursor-pointer transition-transform ease-out duration-[0.5s] hover:scale-[1.3]" title="Canale facrbook" src="images/icons8-facebook-entouré-48.png" alt="icona facebook"/>
+        <img class="size-5 cursor-pointer transition-transform ease-out duration-[0.5s] hover:scale-[1.3]" title="Canale Instagram" src="images/icons8-instagram-48.png" alt="icona instagram"/>
+        <img class="size-5 cursor-pointer transition-transform ease-out duration-[0.5s] hover:scale-[1.3]" title="Canale Twitter" src="images/icons8-twitterx-48.png" alt="icona x"/>
+        <img class="size-5 cursor-pointer transition-transform ease-out duration-[0.5s] hover:scale-[1.3]" title="Canale tik tok" src="images/icons8-tic-tac-100.png" alt="icona tik tok"/>
+      </div>
+    </div>
+  </footer>
+
+  <script src="loader.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+  <script src="menu.js"></script>
+</body>
+</html>

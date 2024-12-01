@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evolving Fitness - Home</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="Images/favicon.ico"/>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet"/>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            krona: ["Krona One", "sans-serif"],
+            myFont: ["myFont", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="loader absolute w-full z-10 h-full bg-black flex items-center justify-center">
+    <span class="lettera text-blue-800 font-bold tracking-[15px]">L</span>
+    <span class="lettera text-blue-800 font-bold tracking-[15px]">O</span>
+    <span class="lettera text-blue-800 font-bold tracking-[15px]">A</span>
+    <span class="lettera text-blue-800 font-bold tracking-[15px]">D</span>
+    <span class="lettera text-blue-800 font-bold tracking-[15px]">I</span>
+    <span class="lettera text-blue-800 font-bold tracking-[15px]">N</span>
+    <span class="lettera text-blue-800 font-bold tracking-[15px]">G</span>
+    <span class="lettera text-blue-800 font-bold tracking-[15px]">.</span>
+    <span class="lettera text-blue-800 font-bold tracking-[15px]">.</span>
+    <span class="lettera text-blue-800 font-bold tracking-[15px]">.</span>
+  </div>
+  <header class="pb-[70px]">
+    <nav class="flex justify-between h-[70px] bg-black text-white items-center fixed w-full z-50 nav-bar-menu">      
+      <div class="relative w-full h-[70px] flex items-center justify-between md:justify-around">
+        <div class="flex ml-5 md:ml-0 items-center h-[70px]">
+          <img class="size-14 md:size-16  rounded-full cursor-pointer" src="images/Logo1.png" alt="logo sito fitness"/>
+        </div>
+        <div 
+        data-aos="zoom-in" 
+        class="hidden md:flex h-[70px] space-x-10 items-center">
+          <ul class="flex space-x-12">
+            <li class="cursor-pointer hover:text-blue-800 transition-transform ease-out duration-[0.5s] hover:scale-[1.1]">
+              <a class="font-krona text-[10px]" href="index.html">HOME</a>
+            </li>
+            <li class="cursor-pointer hover:text-blue-800 transition-transform ease-out duration-[0.5s] hover:scale-[1.1]">
+              <a class="font-krona text-[10px]" href="chisiamo.html">CHI SIAMO</a>
+            </li>
+            <li class="cursor-pointer hover:text-blue-800 transition-transform ease-out duration-[0.5s] hover:scale-[1.1]">
+              <a class="font-krona text-[10px]" href="corsi.html">CORSI</a>
+            </li>
+            <li class="cursor-pointer hover:text-blue-800 transition-transform ease-out duration-[0.5s] hover:scale-[1.1]">
+              <a class="font-krona text-[10px]" href="blog.html">BLOG</a>
+            </li>
+            <li class="cursor-pointer hover:text-blue-800 transition-transform ease-out duration-[0.5s] hover:scale-[1.1]">
+              <a class="font-krona text-[10px]" href="prodotti.html">PRODOTTI</a>
+            </li>
+            <li class="cursor-pointer hover:text-blue-800 transition-transform ease-out duration-[0.5s] hover:scale-[1.1]">
+              <a class="font-krona text-[10px]" href="contatti.html">CONTATTI</a>
+            </li>
+          </ul>
+        </div>
+        <div class="md:hidden w-12">
+          <button id="menu-button" class="text-blue-600 focus:outline-none z-30 relative transition-transform">
+            <!-- Icon per Hamburger Menu -->
+            <svg id="hamburger-icon" class="w-6 h-6 inline-block absolute -top-5 content-center rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+            <!-- Icon per Close Menu -->
+            <svg id="close-icon" class="w-6 h-6 hidden absolute -top-5 hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <div id="mobile-menu" class="text-white fixed top-0 right-0 min-w-72 h-full bg-blue-900 shadow-xl transform transition-transform duration-[0.4s] ease-out translate-x-full z-10">
+          <ul class="flex flex-col space-y-6 mt-16">
+            <li class="cursor-pointer hover:text-white px-10 py-4 hover:bg-slate-800">
+              <a class="font-krona text-[10px]" href="index.html">HOME</a>
+            </li>
+            <li class="cursor-pointer hover:text-white px-10 py-4 hover:bg-slate-800">
+              <a class="font-krona text-[10px]" href="chisiamo.html">CHI SIAMO</a>
+            </li>
+            <li class="cursor-pointer hover:text-white px-10 py-4 hover:bg-slate-800">
+              <a class="font-krona text-[10px]" href="corsi.html">CORSI</a>
+            </li>
+            <li class="cursor-pointer hover:text-white px-10 py-4 hover:bg-slate-800">
+              <a class="font-krona text-[10px]" href="blog.html">BLOG</a>
+            </li>
+            <li class="cursor-pointer hover:text-white px-10 py-4 hover:bg-slate-800">
+              <a class="font-krona text-[10px]" href="prodotti.html">PRODOTTI</a>
+            </li>
+            <li class="cursor-pointer hover:text-white px-10 py-4 hover:bg-slate-800">
+              <a class="font-krona text-[10px]" href="contatti.html">CONTATTI</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>  
+  <main>
+    <div id="toTopButton" class="hidden1">
+      <button class="bg-blue-800 size-12 rounded-full fixed z-50 bottom-12 hover:bg-blue-900 right-4" title="Top of the Page">
+        <img class="size-7 m-auto" src="images/icons8-flèche-vers-le-haut-100.png" alt="immagine per andare in alto"/>
+      </button>
+    </div>  
+    <section id="home" class="h-[calc(100vh-70px)] flex bg-[url(images/header5.png)] items-center justify-center bg-no-repeat bg-cover  flex-col">
+      <div data-aos="fade-up"
+      data-aos-duration="3000">
+      </div>
+      <div
+      data-aos="fade-up"
+      data-aos-duration="2000"
+      class="font-semibold text-center flex flex-col justify-center items-center">
+        <h1 class="text-[60px] font-light font-[myFont] text-[#dad3d3] md:text-[150px]">
+          EVOLVING
+        </h1>
+        <h3 class="text-white -mt-5 mb-10 tracking-[20px] text-[15px]">
+          FITNESS
+        </h3>
+        <div>
+          <div class="flex gap-3 mb-14 sm:gap-x-10">
+            <button class="bg-blue-500 px-10 py-3 rounded-full button-hover-effect w-[150px] justify-center items-center lg:w-40"><a href="contatti.html">CONTATTI</a></button>
+            <button class="bg-blue-500 px-10 py-3 rounded-full button-hover-effect w-[150px] lg:w-40"><a href="corsi.html">CORS</a>I</button>
+        </div>
+      </div>
+    </section>
+    <section class="h-[350px] lg:h-72 bg-[url(images/join.png)] p-10 bg-no-repeat bg-cover flex flex-col justify-center text-center items-center gap-y-5">
+      <h1 
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      class="text-2xl font-bold">Non è mai troppo tardi per iniziare, unisciti a noi oggi!</h1>
+      <span 
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      class="font-bold text-xl bg-black text-white px-7 py-2 rounded-md border border-white">ORARI</span>
+      <span 
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      class="font-bold px-7 py-2 bg-yellow-700 text-white border border-white rounded-md">LUN - MAR - MER - GIO - VEN - SAB</span>
+      <SPan 
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      class="font-bold px-7 py-2 bg-black text-white border border-white rounded-md">6H - 23H</SPan>
+    </section>
+    <section class="overflow-hidden h-[1200px] xl:h-[700px] bg-[url(images/header1.png)] px-8 bg-no-repeat bg-fixed bg-cover flex flex-col xl:flex-row items-center justify-center gap-10">
+      <div class="w-[800px] h-[600px] flex justify-center items-center" title="clicca per visualizzare l'immagine">
+        <div 
+        data-aos="fade-up"
+        data-aos-duration="3000">
+        </div>
+        <div class="slider-images flex items-center gap-[10px]">
+          <div 
+          data-aos="fade-right"
+          data-aos-offset="500"
+          data-aos-easing="ease-in-sine"
+          class="slider-img transition-all duration-700 ease-in-out md:w-[55px] w-[22px]  rounded-md cursor-pointer relative h-[400px]">
+            <img class="w-[200px] md:w-[300px] lg:w-[400px] border border-yellow-100 h-[400px] rounded-md object-cover" src="Images/slider1.jpg" alt="imaggine della sala di box">
+            <h5 class="uppercase absolute text-white top-[50%] -left-2 md:left-0 font-bold text-xl md:text-2xl">PESI</h5>
+            <div class="details w-72 absolute bottom-[20px] left-[20px]">
+              <h6 class="text-yellow-400 font-bold text-base md:text-4xl">Sala Pesi</h6>
+              <p class="text-white text-sm">Disponibile per tutti</p>
+            </div>
+          </div>
+          <div 
+          data-aos="fade-right"
+          data-aos-offset="450"
+          data-aos-easing="ease-in-sine"
+          class="slider-img transition-all duration-700 ease-in-out md:w-[55px] w-[22px]  rounded-md cursor-pointer relative h-[400px]">
+            <img class="w-[200px] md:w-[300px] lg:w-[400px] border border-yellow-100 h-[460px] rounded-md object-cover" src="Images/12.jpg" alt="imaggine della sala di box">
+            <h5 class="uppercase absolute text-white top-[50%] -left-[11px] md:left-0  font-bold text-xl md:text-2xl">BOX</h5>
+            <div class="details w-72 absolute bottom-[20px] left-[20px]">
+              <h6 class="text-green-400 font-bold text-base md:text-4xl">Sala Box</h6>
+              <p class="text-white text-sm">Disponibile per tutti</p>
+            </div>
+          </div>
+          <div
+          data-aos="fade-right"
+          data-aos-offset="400"
+          data-aos-easing="ease-in-sine"
+          class="slider-img transition-all duration-700 ease-in-out md:w-[55px] w-[22px]  rounded-md cursor-pointer relative h-[400px]">
+            <img class="w-[200px] md:w-[300px] lg:w-[400px] border border-yellow-100 h-[500px] rounded-md object-cover" src="Images/slider3.jpg" alt="imaggine della sala di box">
+            <h5 class="uppercase absolute text-white top-[50%] -left-5 md:-left-3 font-bold text-xl md:text-2xl">RELAX</h5>
+            <div class="details w-72 absolute bottom-[20px] left-[20px]">
+              <h6 class="text-blue-800 font-bold text-base md:text-4xl">Sala Relax</h6>
+              <p class="text-white text-sm">Disponibile per tutti</p>
+            </div>
+          </div>
+          <div 
+          data-aos="fade-right"
+          data-aos-offset="350"
+          data-aos-easing="ease-in-sine"
+          class="slider-img transition-all duration-700 ease-in-out md:w-[55px] w-[22px]  rounded-md cursor-pointer relative h-[400px]">
+            <img class="w-[200px] md:w-[300px] lg:w-[400px] border border-yellow-100 h-[500px] rounded-md object-cover" src="Images/slider4.jpg" alt="imaggine della sala di box">
+            <h5 class="uppercase absolute text-white top-[50%] -left-4 md:-left-[6px] font-bold text-xl md:text-2xl">AERO</h5>
+            <div class="details w-72 absolute bottom-[20px] left-[20px]">
+              <h6 class="text-yellow-400 font-bold text-base md:text-4xl">Sala Aero</h6>
+              <p class="text-white text-sm">Disponibile per tutti</p>
+            </div>
+          </div>
+          <div 
+          data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+          class="slider-img transition-all duration-700 ease-in-out md:w-[55px] w-[22px]  rounded-md cursor-pointer relative h-[400px]">
+            <img class="w-[200px] md:w-[300px] lg:w-[400px] border border-yellow-100 h-[500px] rounded-md object-cover" src="Images/slider5.jpg" alt="imaggine della sala di box">
+            <h5 class="uppercase absolute text-white top-[50%] -left-7 md:-left-5 font-bold text-xl md:text-2xl">CARDIO</h5>
+            <div class="details w-72 absolute bottom-[20px] left-[20px]">
+              <h6 class="text-orange-600 font-bold text-base md:text-4xl">Sala Cardio</h6>
+              <p class="text-white text-sm">Disponibile per tutti</p>
+            </div>
+          </div>
+          <div 
+          data-aos="fade-right"
+          data-aos-offset="250"
+          data-aos-easing="ease-in-sine"
+          class="slider-img transition-all duration-700 ease-in-out md:w-[55px] w-[22px]  rounded-md cursor-pointer relative h-[400px]">
+            <img class="w-[200px] md:w-[300px] lg:w-[400px] border border-yellow-100 h-[460px] rounded-md object-cover" src="Images/slider6.jpg" alt="imaggine della sala di box">
+            <h5 class="uppercase absolute text-white top-[50%] -left-[22px] md:-left-[13px] font-bold text-xl md:text-2xl">DOCCE</h5>
+            <div class="details w-72 absolute bottom-[20px] left-[20px]">
+              <h6 class="text-black font-bold text-base md:text-4xl">Docce</h6>
+              <p class="text-white text-sm">Disponibile per tutti</p>
+            </div>
+          </div>
+          <div 
+          data-aos="fade-right"
+          data-aos-offset="100"
+          data-aos-easing="ease-in-sine"
+          class="slider-img transition-all duration-700 ease-in-out md:w-[55px] w-[22px]  rounded-md cursor-pointer relative h-[400px]">
+            <img class="w-[200px] md:w-[300px] lg:w-[400px] border border-yellow-100 h-[400px] rounded-md object-cover" src="Images/slider7.jpg" alt="imaggine della sala di box">
+            <h5 class="uppercase absolute text-white top-[50%] -left-6 md:-left-4 font-bold text-xl md:text-2xl">SAUNA</h5>
+            <div class="details w-72 absolute bottom-[20px] left-[20px]">
+              <h6 class="text-yellow-400 font-bold text-base md:text-4xl">Sala Sauna</h6>
+              <p class="text-white text-sm">Disponibile per tutti</p>
+            </div>
+          </div>
+        </div>
+      </div>    
+      <div
+      data-aos="fade-left"
+      data-aos-offset="300"
+      data-aos-easing="ease-in-sine"
+      class="w-[360px] h-[450px] md:w-[450px] text-center md:h-[380px] bg-transparent backdrop-blur-xl shadow-2xl text-white flex flex-col items-center rounded-md justify-center">
+        <h2 class="font-bold mb-10 text-sm lg:text-base">CALCOLA IL TUO INDICE DI MASSA CORPOREA</h2>
+        <form id="form-risult" class="flex flex-col justify-center items-center">
+          <div class="mb-8 flex text-sm lg:text-base px-3">
+            <label class="font-semibold bg-neutral-700 py-[13px] rounded-l-sm px-2 md:px-3" for="peso">Peso (kg)</label>
+            <input class="py-3 pl-3 w-20 mr-2 md:mr-4 text-black rounded-r-sm" type="number" name="peso" id="peso" placeholder="Peso" required>
+            <label class="font-semibold bg-neutral-700 py-[13px] rounded-l-sm px-2 md:px-3" for="altezza">Altezza (cm)</label>
+            <input class="py-3 pl-3 w-20 text-black rounded-r-sm" type="number" name="altezza" id="altezza" placeholder="Altezza" required>
+          </div>
+          <button class="bg-blue-500 w-[150px] h-12 mb-5 rounded-md button-hover-effect" type="submit">Calcola IMC</button>
+          <div id="risultato" class="h-12 mb-2 text-center font-semibold">
+            --
+          </div>
+          <div class="w-[420px] px-10">
+            <p class="text-[10px] px-4 font-semibold text-center"><i>* Questi parametri sono indicazioni generali per gli adulti (uomini e donne tra i 18 e i 65 anni). Per una valutazione più precisa, si raccomanda di consultare un medico.</i></p>
+          </div>
+        </form>       
+      </div>  
+    </section> 
+    <section class="h flex flex-col">
+      <div class=" bg-black text-white flex justify-center items-center px-10 text-center py-10 lg:py-20">
+        <h4 
+        data-aos="zoom-in"
+        class="font-krona text-sm lg:text-xl">I NOSTRI COACH SONO SEMPRE PRESENTI PER VOI</h4> 
+      </div>
+      <div class=" bg-[url(images/011.jpg)] py-10 md:h-[600px] lg:h-[700px] bg-no-repeat bg-cover justify-center items-center place-items-center bg-fixed flex ">
+        <div class="md:h-[400px] lg:h-[600px] justify-center items-center place-items-center bg-fixed flex flex-wrap gap-x-4">
+          <div
+          data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+          class="w-[252px] h-36 md:w-[350px] md:h-52  lg:w-[490px] lg:h-72 mb-2 lg:mb-0 bg-yellow-500">
+            <video class="object-cover object-center video-hover hover:opacity-95" src="Videos/1.mp4" loop muted loading="lazy"></video>
+          </div>
+          <div 
+          data-aos="fade-up"
+          data-aos-duration="500"
+          class="w-[252px] h-36 md:w-[350px] md:h-52  lg:w-[490px] lg:h-72 mb-2 lg:mb-0 bg-yellow-500">
+            <video class="object-cover object-center video-hover hover:opacity-95" src="Videos/2.mp4" loop muted loading="lazy"></video>
+          </div>
+          <div 
+          data-aos="fade-left"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+          class="w-[252px] h-36 md:w-[350px] md:h-52  lg:w-[490px] lg:h-72 mb-2 lg:mb-0 bg-yellow-500">
+            <video class="object-cover object-center video-hover hover:opacity-95" src="Videos/3.mp4" loop muted loading="lazy"></video>
+          </div>
+          <div 
+          data-aos="fade-up"
+          data-aos-duration="500"
+          class="w-[252px] h-36 md:w-[350px] md:h-52  lg:w-[490px] lg:h-72 mb-2 lg:mb-0 bg-yellow-500">
+            <video class="object-cover object-center video-hover hover:opacity-95" src="Videos/4.mp4" loop muted loading="lazy"></video>
+          </div>
+        </div>
+      </div> 
+    </section>
+    <section class="h-[1300px] lg:py-16 xl: lg:h-[1850px] xl:h-[800px] relative bg-[#242423] flex flex-col items-center justify-center overflow-hidden">
+      <div class="text-neutral-100 px-5 py-1 xl:px-72 lg:py-10 text-center z-10">
+        <p><i> Scegli la nostra palestra per attrezzature moderne, corsi per ogni livello e un ambiente accogliente dove raggiungere i tuoi obiettivi di fitness!
+          Che tu voglia migliorare la tua forma fisica, rilassarti o semplicemente prenderti cura di te stesso, siamo qui per accompagnarti passo dopo passo 
+        </i> </p>
+      </div>
+      <div id="card-area">
+        <div class="box-area flex flex-col xl:flex-row gap-5 lg:gap-10">
+          <div 
+          data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+          class="box w-[300px] h-[300px] z-10 md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[500px] xl:w-[380px] xl:h-[500px] 2xl::w-[400px] 2xl::h-[500px]">
+            <img class="w-[300px] h-[300px] md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[500px] xl:w-[380px] xl:h-[500px] 2xl::w-[400px] 2xl::h-[500px] object-cover object-center" src="Images/corsi-minia.png" alt="">
+            <div style="background: linear-gradient(transparent, rgb(234, 204, 73) 100%)" class="overlay">
+              <button class="mb-10 rounded bg-black text-white font-extrabold hover:bg-white hover:text-black  text-2xl py-2 px-8 ">
+                <a class="" href="corsi.html" target="_blank">CORSI</a>
+              </button>
+              <p class="font-bold uppercase text-xs px-5 w-80 mb-3">Scegli il corso che corrisponde alle tue esigenze: boxe, aerobica, cardio, yoga, danza e molti altri ancora.</p>
+            </div>
+          </div>
+          <div 
+          data-aos="fade-up"
+          data-aos-duration="500"
+          class="box w-[300px] h-[300px] z-10 md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[500px] xl:w-[380px] xl:h-[500px] 2xl::w-[400px] 2xl::h-[500px]">
+            <img class="w-[300px] h-[300px] md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[500px] xl:w-[380px] xl:h-[500px] 2xl::w-[400px] 2xl::h-[500px] object-cover object-center" src="Images/blog.jpg" alt="">
+            <div style="background: linear-gradient(transparent, rgb(216, 127, 183) 100%)" class="overlay">
+              <button class="mb-10 rounded bg-black text-white font-extrabold hover:bg-white hover:text-black transition  text-2xl py-2 px-8 ">
+                <a class="" href="blog.html" target="_blank">BLOG</a>
+              </button>
+              <p class="font-bold uppercase text-xs px-5  w-80 mb-3">Cerca un argomento che ti appassiona tra diversi articoli nel campo della salute e approfondisci le tue conoscenze.</p>
+            </div>
+          </div>
+          <div 
+          data-aos="fade-left"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+          class="box w-[300px] h-[300px] z-10 md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[500px] xl:w-[380px] xl:h-[500px] 2xl::w-[400px] 2xl::h-[500px]">
+            <img class="w-[300px] h-[300px] md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[500px] xl:w-[380px] xl:h-[500px] 2xl::w-[400px] 2xl::h-[500px] object-cover object-center" src="Images/shop.jpg" alt="">
+            <div style="background: linear-gradient(transparent, rgb(104, 115, 230) 100%)" class="overlay">
+              <button class="mb-10 rounded bg-black text-white font-extrabold hover:bg-white hover:text-black transition text-2xl py-2 px-8 ">
+                <a class="" href="prodotti.html" target="_blank">SHOP</a>
+              </button>
+              <p class="font-bold uppercase text-xs px-5 w-80 mb-3">Dai un'occhiata ai prodotti disponibili nel negozio della nostra palestra.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img class="z-1 hidden xl:inline-block lg:absolute xl:w-[533px] xl:-right-40 2xl:-right-24" src="Images/deco.png" alt="">
+    </section>
+    <section class="h-[1700px] md:h-[1100px] lg:h-[1350px] xl:h-[1400px] bg-[url(images/bg-prezzi.jpeg)] bg-cover bg-center bg-fixed flex flex-col justify-center items-center pb-20 xl:pb-40">
+      <img class="w-20 relative -top-20 md:hidden" src="Images/deco-iscriviti.png" alt="">
+      <h4 
+      data-aos="zoom-in"
+      class="text-white font-krona mb-20 xl:mt-10 xl:mb-56 text-2xl uppercase">Iscriviti</h4>
+      <div class="flex lg:mt-32 xl:mt-0 md:h-[800px] flex-col justify-center items-center lg:gap-10 xl:gap-20">
+        <div 
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        class="w-[300px] lg:w-[600px] h-[500px] items-center justify-center">
+          <img class="w-[400px] lg:w-[600px] lg:h-[500px] object-center object-cover" src="Images/prezzi.png" alt="">
+        </div>
+        <div class="w-[300px] lg:w-[650px] xl:w-[800px] h-[550px] justify-center lg:justify-between flex flex-col md:flex-row md:gap-10">
+          <div 
+          data-aos="zoom-in-right"
+          data-aos-duration="1000"
+          class="container2 w-[300px] h-[500px] justify-center items-center flex mb-5">
+            <div class="parent">
+              <div class="card w-[300px] flex rounded-lg border-2 items-end h-[500px] object-cover">
+                <div class="content-box rounded-b-lg rounded-t-sm w-[300px] h-[410px] flex flex-col items-start justify-center p-5">
+                  <h3 class="card-title font-bold text-2xl mt-[40px] mb-8">Standard</h3>
+                  <div class="card-content text-stone-200 mb-[52px]">
+                    <ul class="pl-3">
+                      <li>&#10003;&nbsp &nbsp Sala Fitness</li>
+                      <li>&#10003;&nbsp &nbsp Un corso a scelta</li>
+                      <li>&#10003;&nbsp &nbsp Poltrona Relax</li>
+                      <li>&#10003;&nbsp &nbsp Pedana Vibrante</li>
+                      <li>&#10003;&nbsp &nbsp Acqua</li>
+                    </ul>
+                  </div>
+                  <button class="info bg-black px-5 py-2 rounded-lg font-bold"><a href="contatti.html">INFO</a></button>
+                </div>
+                <div class="prezzo-box p-2">
+                  <div class="prezzo"><span class="font-bold text-2xl">€24</SPan> / Mese</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div 
+          data-aos="zoom-in-left"
+          data-aos-duration="1000"
+          class="container2 w-[300px] h-[500px] justify-center items-center flex">
+          <div class="parent">
+            <div class="card2 w-[300px] flex rounded-lg border-2 items-end h-[500px] object-cover">
+              <div class="content-box2 rounded-b-lg rounded-t-sm w-[300px] h-[410px] flex flex-col items-start justify-center p-5">
+                <h3 class="card-title font-bold text-2xl mt-[40px] mb-4">All Inclusive</h3>
+                <div class="card-content text-stone-200 mb-5">
+                  <ul class="pl-3">
+                    <li>&#10003;&nbsp &nbsp Sala Fitness</li>
+                    <li>&#10003;&nbsp &nbsp due corsi a scelta</li>
+                    <li>&#10003;&nbsp &nbsp Poltrona Relax</li>
+                    <li>&#10003;&nbsp &nbsp Pedana Vibrante</li>
+                    <li>&#10003;&nbsp &nbsp Lampade Abbronzanti</li>
+                    <li>&#10003;&nbsp &nbsp Bevande Energetiche</li>
+                    <li>&#10003;&nbsp &nbsp Pedana Vibrante</li>
+                  </ul>
+                </div>
+                <button class="info bg-black px-5 py-2 rounded-lg font-bold"><a href="contatti.html">INFO</a></button>
+              </div>
+              <div class="prezzo-box2 p-2">
+                <div class="prezzo"><span class="font-bold text-2xl">€39</SPan> / Mese</div>
+              </div>
+            </div>
+          </div>
+          </div>  
+        </div>
+      </div>
+    </section>
+    <section class="bg-black pb-20">
+      <div 
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      class="slider">
+        <div class="slide-track">
+          <div class="slide md:m-[10px]">
+            <img class="size-[150px] md:size-[220px]" src="Images/4-1.jpg" alt="immagine palestra">
+          </div>
+          <div class="slide md:m-[10px]">
+            <img class="size-[150px] md:size-[220px]" src="Images/12.jpg" alt="immagine palestra">
+          </div>
+          <div class="slide md:m-[10px]">
+            <img class="size-[150px] md:size-[220px]" src="Images/7-2.jpg" alt="immagine palestra">
+          </div>
+          <div class="slide md:m-[10px]">
+            <img class="size-[150px] md:size-[220px]" src="Images/11.jpg" alt="immagine palestra">
+          </div>
+          <div class="slide md:m-[10px]">
+            <img class="size-[150px] md:size-[220px]" src="Images/13.jpg" alt="immagine palestra">
+          </div>
+          <div class="slide md:m-[10px]">
+            <img class="size-[150px] md:size-[220px]" src="Images/8-1.jpg" alt="immagine palestra">
+          </div>
+          <div class="slide md:m-[10px]">
+            <img class="size-[150px] md:size-[220px]" src="Images/2.jpg" alt="immagine palestra">
+          </div>
+          <div class="slide md:m-[10px]">
+            <img class="size-[150px] md:size-[220px]" src="Images/10-1.jpg" alt="immagine palestra">
+          </div>
+          <div class="slide md:m-[10px]">
+            <img class="size-[150px] md:size-[220px]" src="Images/14.jpg" alt="immagine palestra">
+          </div>
+
+          <!-- stesse immagini-->
+
+          <div class="slide md:m-[10px]">
+            <img class="size-[150px] md:size-[220px]" src="Images/4-1.jpg" alt="immagine palestra">
+          </div>
+          <div class="slide md:m-[10px]">
+            <img class="size-[150px] md:size-[220px]" src="Images/12.jpg" alt="immagine palestra">
+          </div>
+          <div class="slide md:m-[10px]">
+            <img class="size-[150px] md:size-[220px]" src="Images/7-2.jpg" alt="immagine palestra">
+          </div>
+          <div class="slide md:m-[10px]">
+            <img class="size-[150px] md:size-[220px]" src="Images/11.jpg" alt="immagine palestra">
+          </div>
+          <div class="slide md:m-[10px]">
+            <img class="size-[150px] md:size-[220px]" src="Images/13.jpg" alt="immagine palestra">
+          </div>
+          <div class="slide md:m-[10px]">
+            <img class="size-[150px] md:size-[220px]" src="Images/8-1.jpg" alt="immagine palestra">
+          </div>
+          <div class="slide md:m-[10px]">
+            <img class="size-[150px] md:size-[220px]" src="Images/2.jpg" alt="immagine palestra">
+          </div>
+          <div class="slide md:m-[10px]">
+            <img class="size-[150px] md:size-[220px]" src="Images/10-1.jpg" alt="immagine palestra">
+          </div>
+          <div class="slide md:m-[10px]">
+            <img class="size-[150px] md:size-[220px]" src="Images/14.jpg" alt="immagine palestra">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="flex flex-col bg-[#E8EDDF]">
+    <div 
+    data-aos="fade-down"
+    data-aos-easing="linear"
+    data-aos-duration="1500"
+    class="relative pt-5 overflow-hidden">
+      <img class="absolute w-[600px] md:w-[430px] xl:w-[700px] bottom-0 -right-20" src="Images/footer.png" alt="">
+      <img class="size-16 mb-20 mt-20 rounded-full mx-10" src="Images/Logo1.png" alt="" />
+      <div class="mb-20 px-10">
+        <span class="font-krona text-[9px]">
+          <a class="font-semibold" href="index.html">EVOLVING-FITNESS.COM</a> / SERVIZIO CLIENTI / NOTE LEGALI E PRIVACY / POLITICA SUI COOKIE
+        </span>
+      </div>
+      <div class="flex flex-col md:grid md:grid-cols-2 gap-y-12 justify-between z-10 mb-20 px-10 lg:flex lg:flex-row">
+        <div class="w-60 lg:w-44 xl:w-60">
+          <span class="hover:font-semibold"><a href="prodotti.html">I NOSTRI PRODOTTI</a></span>
+          <ul class="mt-5 font-semibold text-sm hover:font-extrabold">
+            <li><a href="#activities">EVOLVING FITNESS</a></li>
+          </ul>
+        </div>
+        <div class="w-80 xl:w-80">
+          <span>INFORMAZIONI AZIENDALI</span>
+          <ul class="mt-5 font-semibold text-sm leading-7">
+            <li class="hover:font-extrabold">
+              <a href="">LAVORA CON EVOLVING FITNESS</a>
+            </li>
+            <li class="hover:font-extrabold">
+              <a href="chisiamo.html">SUL GRUPPO EVOLVING FITNESS</a>
+            </li>
+            <li class="hover:font-extrabold">
+              <a href="">SOSTENIBILITÀ DEL GRUPPO EVOLVING FITNESS</a>
+            </li>
+            <li class="hover:font-extrabold">
+              <a href="">MATERIALI STAMPA</a>
+            </li>
+            <li class="hover:font-extrabold">
+              <a href="">RELAZIONI CON GLI INVESTITORI</a>
+            </li>
+            <li class="hover:font-extrabold">
+              <a href="">GOVERNANCE AZIENDALE</a>
+            </li>
+          </ul>
+        </div>
+        <div class="w-64 z-10 lg:w-60 xl:w-64">
+          <span>AIUTO</span>
+          <ul class="mt-5 font-semibold text-sm leading-7">
+            <li class="hover:font-extrabold">
+              <a href="contatti.html">SERVIZIO CLIENTI</a>
+            </li>
+            <li class="hover:font-extrabold">
+              <a href="contatti.html">TROVA IL NOSTRO NEGOZIO</a>
+            </li>
+            <li class="hover:font-extrabold">
+              <a href="">NOTE LEGALI E PRIVACY</a>
+            </li>
+            <li class="hover:font-extrabold">
+              <a href="">CARTA REGALO</a>
+            </li>
+            <li class="hover:font-extrabold">
+              <a href="">POLITICA SUI COOKIE</a>
+            </li>
+            <li class="hover:font-extrabold">
+              <a href="">IMPOSTAZIONI DEI COOKIE</a>
+            </li>
+          </ul>
+        </div>
+        <div class="w-60 bg-[#CFDBD5] z-10 shadow-2xl flex flex-col p-5 rounded-lg lg:w-60 xl:w-72">
+          <span class="hover:font-semibold"><a href="contatti.html">ISCRIVITI ORA</a></span>
+          <p class="mt-5 mb-5">
+            Offerta di benvenuto: 10% di sconto + una sessione gratuita con un coach!
+          </p>
+          <a class="font-semibold hover:font-extrabold" href="contatti.html">SCOPRI DI PIÙ</a>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col justify-between text-center h-28 md:h-24 py-5 gap-2 items-center bg-[#333533] text-white px-10 lg:flex-row lg:justify-between">
+      <div>
+        <p class="text-[10px] lg:text-[12px]">
+          Il contenuto di questo sito web è protetto da copyright ed è di proprietà di Franck Emmanuel N.D. 2024
+        </p>
+      </div>
+      <div class="flex gap-6">
+        <img class="size-5 cursor-pointer transition-transform ease-out duration-[0.5s] hover:scale-[1.3]" title="Canale facrbook" src="images/icons8-facebook-entouré-48.png" alt="icona facebook"/>
+        <img class="size-5 cursor-pointer transition-transform ease-out duration-[0.5s] hover:scale-[1.3]" title="Canale Instagram" src="images/icons8-instagram-48.png" alt="icona instagram"/>
+        <img class="size-5 cursor-pointer transition-transform ease-out duration-[0.5s] hover:scale-[1.3]" title="Canale Twitter" src="images/icons8-twitterx-48.png" alt="icona x"/>
+        <img class="size-5 cursor-pointer transition-transform ease-out duration-[0.5s] hover:scale-[1.3]" title="Canale tik tok" src="images/icons8-tic-tac-100.png" alt="icona tik tok"/>
+      </div>
+    </div>
+  </footer>
+  <!-- jQuery CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<!-- Transit.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.12/jquery.transit.min.js"></script>
+  <script src="loader.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+  <script src="menu.js"></script>
+  <script src="index.js"></script>  
+</body>
+</html>

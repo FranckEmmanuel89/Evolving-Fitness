@@ -1,0 +1,424 @@
+.button-hover-effect {
+    position: relative; /* Nécessaire pour positionner le pseudo-élément */
+    display: inline-block;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 8px;
+    background-color: #3b82f6; /* Bleu */
+    color: white;
+    font-weight: bold;
+    overflow: hidden; /* Cache l'animation en dehors des limites */
+    cursor: pointer;
+    z-index: 1;
+    transition: color 0.6s ease; /* Transition pour le texte */
+  }
+  
+.button-hover-effect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%; /* Animation partira de l'extérieur à gauche */
+    width: 100%;
+    height: 100%;
+    background-color: #f59e0b; /* Ambre */
+    transition: all 0.6s ease;
+    z-index: -1; /* Derrière le texte */
+    transform: translateX(0);
+  }
+  
+.button-hover-effect:hover::before {
+    left: 0; /* Appliquer la couleur ambre */
+    transition: left 0.6s ease; /* Animation de gauche à droite */
+  }
+  
+  .button-hover-effect:hover {
+    color: white; /* Conserver le texte blanc */
+  }
+  /* 
+  #home {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    animation-name: animation-hero;
+    animation-duration: 20s;
+    animation-delay: 20s;
+    animation-iteration-count: infinite;
+    transition-delay: 20s;
+  }
+  @keyframes animation-hero {
+    0% {
+      background-image: url(Images/header5.png);
+    }
+    50% {
+      background-image: url(Images/header7.png);
+    }
+  }
+*/ 
+
+.slider-container {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h5 {
+  transform: rotate(270deg);
+  transition: 0.7s ease;
+}
+
+.slider-img {
+  transition: 0.7s ease;
+}
+
+.slider-images .slider-img:first-child, .slider-images .slider-img:last-child {
+  height: 400px
+}
+  
+.slider-images .slider-img:nth-child(2), .slider-images .slider-img:nth-child(6) {
+  height: 460px
+}
+
+.slider-images .slider-img:nth-child(3), .slider-images .slider-img:nth-child(4), .slider-images .slider-img:nth-child(5) {
+  height: 500px
+}
+  
+.slider-img.active {
+  width: 150px;
+  height: 500px;
+}
+
+@media (min-width: 768px) {
+  .slider-img.active {
+    width: 300px;
+    height: 500px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .slider-img.active {
+    width: 400px;
+    height: 500px;
+  }
+}
+
+.slider-img.active h5 {
+  display: none;
+  transition: 0.7s ease;
+}
+
+.details p {
+  transition: 0.7s ease;
+}
+
+.details p, .details h6 {
+  display: none;
+  transition: 0.7s ease;
+}
+
+.slider-img.active .details p, .slider-img.active .details h6 {
+  display: block;
+  transition: 0.7s ease;
+}
+
+#card-area {
+  padding: 50px 0;
+}
+ 
+.box {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.box img {
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.5s;
+}
+
+.overlay {
+  height: 0;
+  width: 100%;
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  font-size: 14px;
+  transition: height 0.5s;
+}
+.box:hover .overlay {
+  height: 50%;
+}
+
+.box:hover img {
+  transform: scale(1.1);
+}
+
+.parent {
+  perspective: 1200px;
+} 
+
+.card, .card2 {
+  transform-style: preserve-3d;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  transition: all 0.5s ease-in-out;
+  border-radius: 10px;
+}
+
+.card {
+  background-image: url(images/pe1.png);
+}
+
+.card2 {
+  background-image: url(images/pe2.png);
+}
+.card:hover, .card2:hover {
+  background-position: 80% 20%;
+  transform: rotate3d(0.5, 1, 0, 30deg);
+}
+
+.content-box, .content-box2 {
+  background-color: rgba(0, 0, 0, 0.811);
+  transform-style: preserve-3d;
+  transition: all 0.5s ease-in-out;
+}
+.content-box {
+  box-shadow: rgba(246, 214, 139, 0.925) 0px 20px 50px -25px;
+}
+
+.content-box2 {
+  box-shadow: rgba(103, 180, 224, 0.925) 0px 20px 50px -25px;
+}
+
+.card-title, .card-content, .info  {
+  transition: all 0.5s ease-in-out;
+  transform: translate3d(0px, 0px, 20px);
+}
+
+.card-title:hover, .card-content:hover, .info:hover {
+  transform: translate3d(0px, 0px, 50px);
+}
+
+.prezzo-box, .prezzo-box2 {
+  display: flex;
+  position: absolute;
+  top: 50px;
+  left: 23px;
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  color: black;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+  transform: translate3d(0px, 0px, 5px);
+}
+
+.prezzo-box {
+  background-color:rgb(255, 228, 196);
+}
+.prezzo-box2 {
+  background-color:rgb(155, 211, 244);
+}
+
+.prezzo-box:hover, .prezzo-box2:hover {
+  transform: translate3d(0px, 0px, 20px);
+}
+
+.image-articolo1, .image-articolo2, .image-articolo3, .animation-filter {
+  transition: transform 0.8s ease-in-out;
+}
+
+.image-prodotti, .immagine-corsi-mini, .immagine-coach-mini {
+  transition: all 0.2s ease-in-out;
+}
+
+.image-prodotti:hover {
+  box-shadow: rgba(220, 109, 177, 0.925) 0px 20px 50px -8px;
+  opacity: 0.9;
+}
+
+.immagine-corsi-mini:hover {
+  box-shadow: rgba(237, 232, 180, 0.925) 0px 20px 50px -20px;
+  opacity: 0.7;
+}
+
+.immagine-coach-mini:hover {
+  box-shadow: rgba(232, 232, 179, 0.925) 0px 20px 50px -20px;
+  opacity: 0.9; 
+}
+
+.lettera {
+  animation:  flash 1.2s linear infinite;
+}
+
+@keyframes flash {
+  0% {
+    color: #1e40af;
+    text-shadow: 0 0 7px #1e40af;
+  }
+  90% {
+    color: rgb(7, 7, 73);
+    text-shadow: none;
+  }
+  100% {
+    color: #1e40af;
+    text-shadow: #1e40af;
+  }
+}
+
+.lettera:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.lettera:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.lettera:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.lettera:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.lettera:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.lettera:nth-child(6) {
+  animation-delay: 0.6s;
+}
+.lettera:nth-child(7) {
+  animation-delay: 0.7s;
+}
+.lettera:nth-child(8) {
+  animation-delay: 0.8s;
+}
+.lettera:nth-child(9) {
+  animation-delay: 0.9s;
+}
+.lettera:nth-child(10) {
+  animation-delay: 1s;
+}
+
+.fondu-out {
+  opacity: 0;
+  transition: opacity 0.4s ease-out;
+}
+
+.scrolling-text {
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+}
+
+.scrolling-text p {
+  display: inline-block;
+  animation: scroll1 20s linear infinite;
+}
+
+@keyframes scroll1 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.slider {
+  height: 270px;
+  margin: auto;
+  position: relative;
+  width: 90%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.slide-track {
+  display: flex;
+  width: calc(250px * 18);
+  animation: scroll 40s linear infinite;
+}
+
+/*
+.slide-track:hover {
+  animation-play-state: paused;
+} 
+*/
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 9));
+  }
+}
+
+
+.slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 17px;
+  object-fit: cover;
+  object-position: center;
+  perspective: 100px;
+}
+
+.slide:hover {
+  opacity: 0.9;
+}
+
+img {
+  width: 250px;
+  height: 200px;
+  transition: transform 1s;
+}
+
+img:hover {
+  transform: translateZ(20px);
+}
+
+.slider::before,
+.slider::after {
+  background: linear-gradient(to right, rgb(0, 0, 0) 0%, rgba(255,255,255,0) 100%);
+  content: '';
+  height: 100%;
+  position: absolute;
+  width: 15%;
+  z-index: 2;
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
+
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.hidden1 {
+  display: none;
+}
+.block1 {
+  display: block;
+}
+
+
+

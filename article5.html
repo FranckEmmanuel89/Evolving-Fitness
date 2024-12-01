@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evolving Fitness - I Benefici del Digiuno Intermittente</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="Images/favicon.ico"/>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet"/>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              krona: ["Krona One", "sans-serif"],
+              myFont: ["myFont", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+<body class="font-sans leading-relaxed tracking-wide bg-[url(Images/digiuno-bg.jpg)] bg-no-repeat bg-cover bg-center bg-fixed">
+  <div class="loader absolute w-full z-10 h-full bg-black flex items-center justify-center">
+    <span class="lettera text-blue-800 font-bold tracking-[15px]">L</span>
+    <span class="lettera text-blue-800 font-bold tracking-[15px]">O</span>
+    <span class="lettera text-blue-800 font-bold tracking-[15px]">A</span>
+    <span class="lettera text-blue-800 font-bold tracking-[15px]">D</span>
+    <span class="lettera text-blue-800 font-bold tracking-[15px]">I</span>
+    <span class="lettera text-blue-800 font-bold tracking-[15px]">N</span>
+    <span class="lettera text-blue-800 font-bold tracking-[15px]">G</span>
+    <span class="lettera text-blue-800 font-bold tracking-[15px]">.</span>
+    <span class="lettera text-blue-800 font-bold tracking-[15px]">.</span>
+    <span class="lettera text-blue-800 font-bold tracking-[15px]">.</span>
+  </div>
+  <header class="pb-[70px]">
+    <nav class="flex justify-between h-[70px] bg-black text-white items-center fixed w-full z-50 nav-bar-menu">      
+      <div class="relative w-full h-[70px] flex items-center justify-between md:justify-around">
+        <div class="flex ml-5 md:ml-0 items-center h-[70px]">
+          <img class="size-14 md:size-16  rounded-full cursor-pointer" src="images/Logo1.png" alt="logo sito fitness"/>
+        </div>
+        <div 
+        data-aos="zoom-in" 
+        class="hidden md:flex h-[70px] space-x-10 items-center">
+          <ul class="flex space-x-12">
+            <li class="cursor-pointer hover:text-blue-800 transition-transform ease-out duration-[0.5s] hover:scale-[1.1]">
+              <a class="font-krona text-[10px]" href="index.html">HOME</a>
+            </li>
+            <li class="cursor-pointer hover:text-blue-800 transition-transform ease-out duration-[0.5s] hover:scale-[1.1]">
+              <a class="font-krona text-[10px]" href="chisiamo.html">CHI SIAMO</a>
+            </li>
+            <li class="cursor-pointer hover:text-blue-800 transition-transform ease-out duration-[0.5s] hover:scale-[1.1]">
+              <a class="font-krona text-[10px]" href="corsi.html">CORSI</a>
+            </li>
+            <li class="cursor-pointer hover:text-blue-800 transition-transform ease-out duration-[0.5s] hover:scale-[1.1]">
+              <a class="font-krona text-[10px]" href="blog.html">BLOG</a>
+            </li>
+            <li class="cursor-pointer hover:text-blue-800 transition-transform ease-out duration-[0.5s] hover:scale-[1.1]">
+              <a class="font-krona text-[10px]" href="prodotti.html">PRODOTTI</a>
+            </li>
+            <li class="cursor-pointer hover:text-blue-800 transition-transform ease-out duration-[0.5s] hover:scale-[1.1]">
+              <a class="font-krona text-[10px]" href="contatti.html">CONTATTI</a>
+            </li>
+          </ul>
+        </div>
+        <div class="md:hidden w-12">
+          <button id="menu-button" class="text-blue-600 focus:outline-none z-30 relative transition-transform">
+            <!-- Icon per Hamburger Menu -->
+            <svg id="hamburger-icon" class="w-6 h-6 inline-block absolute -top-5 content-center rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+            <!-- Icon per Close Menu -->
+            <svg id="close-icon" class="w-6 h-6 hidden absolute -top-5 hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <div id="mobile-menu" class="text-white fixed top-0 right-0 min-w-72 h-full bg-blue-900 shadow-xl transform transition-transform duration-[0.4s] ease-out translate-x-full z-10">
+          <ul class="flex flex-col space-y-6 mt-16">
+            <li class="cursor-pointer hover:text-white px-10 py-4 hover:bg-slate-800">
+              <a class="font-krona text-[10px]" href="index.html">HOME</a>
+            </li>
+            <li class="cursor-pointer hover:text-white px-10 py-4 hover:bg-slate-800">
+              <a class="font-krona text-[10px]" href="chisiamo.html">CHI SIAMO</a>
+            </li>
+            <li class="cursor-pointer hover:text-white px-10 py-4 hover:bg-slate-800">
+              <a class="font-krona text-[10px]" href="corsi.html">CORSI</a>
+            </li>
+            <li class="cursor-pointer hover:text-white px-10 py-4 hover:bg-slate-800">
+              <a class="font-krona text-[10px]" href="blog.html">BLOG</a>
+            </li>
+            <li class="cursor-pointer hover:text-white px-10 py-4 hover:bg-slate-800">
+              <a class="font-krona text-[10px]" href="prodotti.html">PRODOTTI</a>
+            </li>
+            <li class="cursor-pointer hover:text-white px-10 py-4 hover:bg-slate-800">
+              <a class="font-krona text-[10px]" href="contatti.html">CONTATTI</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <section
+  data-aos="zoom-in"
+  class=" h-48 flex flex-col justify-center items-center bg-neutral-800 text-white text-center py-6 shadow-md">
+    <h1 class="text-4xl font-bold">Il Digiuno Intermittente per Perdere Peso</h1>
+    <p class="text-lg mt-2">Una guida per capire e adottare questa strategia alimentare</p>
+  </section>
+  <main class="max-w-4xl mx-auto mt-8 p-6 mb-16 rounded-lg shadow-md">
+    <section 
+    data-aos="fade-up"
+    data-aos-duration="1000"
+    class="mb-20">
+      <h2 class="text-2xl font-semibold text-blue-600 mt-20 mb-4">Cos'è il Digiuno Intermittente?</h2>
+      <p class="text-white text-lg mb-4">Il digiuno intermittente è un modello alimentare che alterna periodi di digiuno a periodi in cui si può mangiare. Non è una dieta tradizionale, ma una strategia per ottimizzare l'energia del corpo e favorire la perdita di peso, basandosi su ritmi naturali.</p>
+      <div class="flex my-20 justify-center">
+        <img src="Images/digiuno.png" alt="Digiuno intermittente" class="rounded-lg shadow-lg bg-gray-50 w-full max-w-md">
+      </div>
+    </section>
+    <section 
+    data-aos="fade-up"
+    data-aos-duration="1000"
+    class="mb-20">
+      <h2 class="text-2xl font-semibold text-blue-600 mb-4">I Benefici del Digiuno Intermittente</h2>
+      <ul class="ml-5 list-disc list-inside text-white">
+        <li class="mb-2">Aiuta a bruciare grassi accumulati durante i periodi di digiuno.</li>
+        <li class="mb-2">Migliora la sensibilità all'insulina, riducendo il rischio di diabete.</li>
+        <li class="mb-2">Riduce l'infiammazione e favorisce la salute del cuore.</li>
+        <li class="mb-2">Può migliorare la concentrazione mentale e l'energia.</li>
+        <li class="mb-2">Facilita una routine semplice senza dover contare calorie.</li>
+      </ul>
+    </section>
+    <section 
+    data-aos="fade-up"
+    data-aos-duration="1000"
+    class="mb-20">
+      <h2 class="text-2xl font-semibold text-blue-600 mb-4">Tipi di Digiuno Intermittente</h2>
+      <p class="text-white mb-4">Esistono diversi metodi per praticare il digiuno intermittente. Ecco i più comuni:</p>
+      <ul class="ml-5 list-disc list-inside text-white">
+        <li class="mb-2"><strong>16/8</strong>: Digiunare per 16 ore e consumare i pasti in una finestra di 8 ore.</li>
+        <li class="mb-2"><strong>5:2</strong>: Mangiare normalmente per 5 giorni e ridurre drasticamente le calorie per 2 giorni.</li>
+        <li class="mb-2"><strong>Digiuno alternato</strong>: Alternare giorni di digiuno completo con giorni normali.</li>
+        <li class="mb-2"><strong>Eat-Stop-Eat</strong>: Un digiuno di 24 ore una o due volte a settimana.</li>
+      </ul>
+    </section>
+    <section 
+    data-aos="fade-up"
+    data-aos-duration="1000"
+    class="mb-20">
+      <h2 class="text-2xl font-semibold text-blue-600 mb-4">Come Iniziare</h2>
+      <p class="text-white mb-4">Adottare il digiuno intermittente può sembrare complicato all'inizio, ma seguendo questi passaggi, sarà più semplice:</p>
+      <ul class="ml-5 list-disc list-inside text-white">
+        <li class="mb-2">Scegli un metodo che si adatta alla tua routine, come il 16/8.</li>
+        <li class="mb-2">Bevi molta acqua durante i periodi di digiuno per rimanere idratato.</li>
+        <li class="mb-2">Durante la finestra alimentare, opta per cibi nutrienti e integrali.</li>
+        <li class="mb-2">Evita spuntini inutili e cerca di limitare zuccheri e cibi processati.</li>
+        <li class="mb-2">Inizia lentamente, aumentando gradualmente le ore di digiuno.</li>
+      </ul>
+    </section>
+    <section
+    data-aos="fade-up"
+    data-aos-duration="1000">
+      <h2 class="text-2xl font-semibold text-blue-600 mb-4">Conclusione</h2>
+      <p class="text-white">Il digiuno intermittente è una strategia efficace per perdere peso e migliorare la salute. Tuttavia, ogni persona è diversa, quindi è importante ascoltare il proprio corpo e, se necessario, consultare un professionista della salute.</p>
+      <p class="text-gray-400 text-sm mt-4">*Nota: Prima di iniziare qualsiasi cambiamento significativo nella dieta, consulta il tuo medico.*</p>
+    </section>
+  </main>
+  <footer class="flex text-black flex-col bg-[#E8EDDF]">
+    <div 
+    data-aos="fade-down"
+    data-aos-easing="linear"
+    data-aos-duration="1000"
+    class="relative pt-5 overflow-hidden">
+      <img class="absolute w-[600px] md:w-[430px] xl:w-[700px] bottom-0 -right-20" src="Images/footer.png" alt="">
+      <img class="size-16 mb-20 mt-20 rounded-full mx-10" src="Images/Logo1.png" alt="" />
+      <div class="mb-20 px-10">
+        <span class="font-krona text-[9px]">
+          <a class="font-semibold" href="index.html">EVOLVING-FITNESS.COM</a> / SERVIZIO CLIENTI / NOTE LEGALI E PRIVACY / POLITICA SUI COOKIE
+        </span>
+      </div>
+      <div class="flex flex-col md:grid md:grid-cols-2 gap-y-12 justify-between z-10 mb-20 px-10 lg:flex lg:flex-row">
+        <div class="w-60 lg:w-44 xl:w-60">
+          <span class="hover:font-semibold"><a href="prodotti.html">I NOSTRI PRODOTTI</a></span>
+          <ul class="mt-5 font-semibold text-sm hover:font-extrabold">
+            <li><a href="index.html">EVOLVING FITNESS</a></li>
+          </ul>
+        </div>
+        <div class="w-80 xl:w-80">
+          <span>INFORMAZIONI AZIENDALI</span>
+          <ul class="mt-5 font-semibold text-sm leading-7">
+            <li class="hover:font-extrabold">
+              <a href="">LAVORA CON EVOLVING FITNESS</a>
+            </li>
+            <li class="hover:font-extrabold">
+              <a href="chisiamo.html">SUL GRUPPO EVOLVING FITNESS</a>
+            </li>
+            <li class="hover:font-extrabold">
+              <a href="">SOSTENIBILITÀ DEL GRUPPO EVOLVING FITNESS</a>
+            </li>
+            <li class="hover:font-extrabold">
+              <a href="">MATERIALI STAMPA</a>
+            </li>
+            <li class="hover:font-extrabold">
+              <a href="">RELAZIONI CON GLI INVESTITORI</a>
+            </li>
+            <li class="hover:font-extrabold">
+              <a href="">GOVERNANCE AZIENDALE</a>
+            </li>
+          </ul>
+        </div>
+        <div class="w-64 z-10 lg:w-60 xl:w-64">
+          <span>AIUTO</span>
+          <ul class="mt-5 font-semibold text-sm leading-7">
+            <li class="hover:font-extrabold">
+              <a href="contatti.html">SERVIZIO CLIENTI</a>
+            </li>
+            <li class="hover:font-extrabold">
+              <a href="contatti.html">TROVA IL NOSTRO NEGOZIO</a>
+            </li>
+            <li class="hover:font-extrabold">
+              <a href="">NOTE LEGALI E PRIVACY</a>
+            </li>
+            <li class="hover:font-extrabold">
+              <a href="">CARTA REGALO</a>
+            </li>
+            <li class="hover:font-extrabold">
+              <a href="">POLITICA SUI COOKIE</a>
+            </li>
+            <li class="hover:font-extrabold">
+              <a href="">IMPOSTAZIONI DEI COOKIE</a>
+            </li>
+          </ul>
+        </div>
+        <div class="w-60 bg-[#CFDBD5] z-10 shadow-2xl flex flex-col p-5 rounded-lg lg:w-60 xl:w-72">
+          <span class="hover:font-semibold"><a href="contatti.html">ISCRIVITI ORA</a></span>
+          <p class="mt-5 mb-5">
+            Offerta di benvenuto: 10% di sconto + una sessione gratuita con un coach!
+          </p>
+          <a class="font-semibold hover:font-extrabold" href="contatti.html">SCOPRI DI PIÙ</a>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col justify-between text-center h-28 md:h-24 py-5 gap-2 items-center bg-[#333533] text-white px-10 lg:flex-row lg:justify-between">
+      <div>
+        <p class="text-[10px] lg:text-[12px]">
+          Il contenuto di questo sito web è protetto da copyright ed è di proprietà di Franck Emmanuel N.D. 2024
+        </p>
+      </div>
+      <div class="flex gap-6">
+        <img class="size-5 cursor-pointer transition-transform ease-out duration-[0.5s] hover:scale-[1.3]" title="Canale facrbook" src="images/icons8-facebook-entouré-48.png" alt="icona facebook"/>
+        <img class="size-5 cursor-pointer transition-transform ease-out duration-[0.5s] hover:scale-[1.3]" title="Canale Instagram" src="images/icons8-instagram-48.png" alt="icona instagram"/>
+        <img class="size-5 cursor-pointer transition-transform ease-out duration-[0.5s] hover:scale-[1.3]" title="Canale Twitter" src="images/icons8-twitterx-48.png" alt="icona x"/>
+        <img class="size-5 cursor-pointer transition-transform ease-out duration-[0.5s] hover:scale-[1.3]" title="Canale tik tok" src="images/icons8-tic-tac-100.png" alt="icona tik tok"/>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="loader.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+  <script src="menu.js"></script>  
+</body>
+</html>
+

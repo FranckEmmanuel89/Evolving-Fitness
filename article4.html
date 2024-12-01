@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evolving Fitness - Metabolismo Basale: Cos'è e Come Calcolarlo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="Images/favicon.ico"/>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet"/>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              krona: ["Krona One", "sans-serif"],
+              myFont: ["myFont", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+<body class="text-white font-sans leading-relaxed bg-[url(Images/metabolimo-bg.jpg)] bg-no-repeat bg-cover bg-center bg-fixed">
+  <div class="loader absolute w-full z-10 h-full bg-black flex items-center justify-center">
+    <span class="lettera text-blue-800 font-bold tracking-[15px]">L</span>
+    <span class="lettera text-blue-800 font-bold tracking-[15px]">O</span>
+    <span class="lettera text-blue-800 font-bold tracking-[15px]">A</span>
+    <span class="lettera text-blue-800 font-bold tracking-[15px]">D</span>
+    <span class="lettera text-blue-800 font-bold tracking-[15px]">I</span>
+    <span class="lettera text-blue-800 font-bold tracking-[15px]">N</span>
+    <span class="lettera text-blue-800 font-bold tracking-[15px]">G</span>
+    <span class="lettera text-blue-800 font-bold tracking-[15px]">.</span>
+    <span class="lettera text-blue-800 font-bold tracking-[15px]">.</span>
+    <span class="lettera text-blue-800 font-bold tracking-[15px]">.</span>
+  </div>
+  <header class="pb-[70px]">
+    <nav class="flex justify-between h-[70px] bg-black text-white items-center fixed w-full z-50 nav-bar-menu">      
+      <div class="relative w-full h-[70px] flex items-center justify-between md:justify-around">
+        <div class="flex ml-5 md:ml-0 items-center h-[70px]">
+          <img class="size-14 md:size-16  rounded-full cursor-pointer" src="images/Logo1.png" alt="logo sito fitness"/>
+        </div>
+        <div 
+        data-aos="zoom-in" 
+        class="hidden md:flex h-[70px] space-x-10 items-center">
+          <ul class="flex space-x-12">
+            <li class="cursor-pointer hover:text-blue-800 transition-transform ease-out duration-[0.5s] hover:scale-[1.1]">
+              <a class="font-krona text-[10px]" href="index.html">HOME</a>
+            </li>
+            <li class="cursor-pointer hover:text-blue-800 transition-transform ease-out duration-[0.5s] hover:scale-[1.1]">
+              <a class="font-krona text-[10px]" href="chisiamo.html">CHI SIAMO</a>
+            </li>
+            <li class="cursor-pointer hover:text-blue-800 transition-transform ease-out duration-[0.5s] hover:scale-[1.1]">
+              <a class="font-krona text-[10px]" href="corsi.html">CORSI</a>
+            </li>
+            <li class="cursor-pointer hover:text-blue-800 transition-transform ease-out duration-[0.5s] hover:scale-[1.1]">
+              <a class="font-krona text-[10px]" href="blog.html">BLOG</a>
+            </li>
+            <li class="cursor-pointer hover:text-blue-800 transition-transform ease-out duration-[0.5s] hover:scale-[1.1]">
+              <a class="font-krona text-[10px]" href="prodotti.html">PRODOTTI</a>
+            </li>
+            <li class="cursor-pointer hover:text-blue-800 transition-transform ease-out duration-[0.5s] hover:scale-[1.1]">
+              <a class="font-krona text-[10px]" href="contatti.html">CONTATTI</a>
+            </li>
+          </ul>
+        </div>
+        <div class="md:hidden w-12">
+          <button id="menu-button" class="text-blue-600 focus:outline-none z-30 relative transition-transform">
+            <!-- Icon per Hamburger Menu -->
+            <svg id="hamburger-icon" class="w-6 h-6 inline-block absolute -top-5 content-center rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+            <!-- Icon per Close Menu -->
+            <svg id="close-icon" class="w-6 h-6 hidden absolute -top-5 hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <div id="mobile-menu" class="text-white fixed top-0 right-0 min-w-72 h-full bg-blue-900 shadow-xl transform transition-transform duration-[0.4s] ease-out translate-x-full z-10">
+          <ul class="flex flex-col space-y-6 mt-16">
+            <li class="cursor-pointer hover:text-white px-10 py-4 hover:bg-slate-800">
+              <a class="font-krona text-[10px]" href="index.html">HOME</a>
+            </li>
+            <li class="cursor-pointer hover:text-white px-10 py-4 hover:bg-slate-800">
+              <a class="font-krona text-[10px]" href="chisiamo.html">CHI SIAMO</a>
+            </li>
+            <li class="cursor-pointer hover:text-white px-10 py-4 hover:bg-slate-800">
+              <a class="font-krona text-[10px]" href="corsi.html">CORSI</a>
+            </li>
+            <li class="cursor-pointer hover:text-white px-10 py-4 hover:bg-slate-800">
+              <a class="font-krona text-[10px]" href="blog.html">BLOG</a>
+            </li>
+            <li class="cursor-pointer hover:text-white px-10 py-4 hover:bg-slate-800">
+              <a class="font-krona text-[10px]" href="prodotti.html">PRODOTTI</a>
+            </li>
+            <li class="cursor-pointer hover:text-white px-10 py-4 hover:bg-slate-800">
+              <a class="font-krona text-[10px]" href="contatti.html">CONTATTI</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <section 
+  data-aos="zoom-in"
+  class="bg-neutral-800 h-48 flex flex-col justify-center items-center text-white text-center py-8">
+    <h1 class="text-4xl font-bold">Metabolismo Basale: Cos'è e Come Calcolarlo</h1>
+    <p class="text-lg mt-2">Scopri i segreti del tuo corpo per migliorare la tua salute</p>
+  </section>
+  <main class="max-w-5xl mx-auto mt-10 mb-16 p-6">
+    <section 
+    data-aos="fade-up"
+    data-aos-duration="1500"
+    class="shadow-lg rounded-lg p-6">
+      <h2 class="text-3xl font-bold mb-4 text-yellow-200">Cos'è il Metabolismo Basale?</h2>
+      <p class="text-white leading-relaxed">
+        Il metabolismo basale rappresenta la quantità di energia (calorie) che il tuo corpo utilizza a riposo per mantenere le funzioni vitali. 
+        È influenzato da diversi fattori come età, sesso, peso, altezza e composizione corporea.
+      </p>
+    </section>
+    <section class="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div 
+      data-aos="fade-right"
+      data-aos-offset="300"
+      data-aos-easing="ease-in-sine"
+      class="rounded-lg p-6 shadow-md">
+        <h3 class="text-xl font-semibold text-yellow-200 mb-4">Come Calcolare il Metabolismo Basale</h3>
+        <p>
+          Il MB può essere calcolato utilizzando la formula di Harris-Benedict:
+        </p>
+        <ul class="list-disc mb-7 pl-6 text-white mt-4">
+          <li><strong>Uomini:</strong> 66 + (13,7 × peso in kg) + (5 × altezza in cm) − (6,8 × età in anni)</li>
+          <li><strong>Donne:</strong> 655 + (9,6 × peso in kg) + (1,8 × altezza in cm) − (4,7 × età in anni)</li>
+        </ul>
+        <p class="text-[14px] text-neutral-400 font-semibold">
+           <i> * Questi valori sono medie e devono essere adattati in base alle caratteristiche personali di ogni individuo. Per una stima precisa, si consiglia di consultare un professionista sanitario o un dietologo.</i></p>
+      </div>
+      <div 
+      data-aos="fade-left"
+      data-aos-offset="300"
+      data-aos-easing="ease-in-sine"
+      class="bg-white rounded-lg p-6 shadow-md flex flex-col items-center">
+        <img 
+          src="images/metabolimo basale.png" 
+          alt="Illustrazione del metabolismo" 
+          class="rounded-md h-[300px] w-full object-cover mb-4">
+        <p class="text-center text-black text-sm">
+          "Il metabolismo basale è come il motore del tuo corpo: consuma energia anche a riposo."
+        </p>
+      </div>
+    </section>
+    <section class="shadow-lg rounded-lg p-6 mt-10">
+      <h2 
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      class="text-3xl font-bold mb-6 text-yellow-200">Consigli per Gestire il Tuo Metabolismo</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div 
+        data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
+        class="bg-green-200 p-4 rounded-lg shadow text-black">
+          <h3 class="font-semibold text-lg mb-2">1. Mangia in Modo Bilanciato</h3>
+          <p>
+            Consuma pasti equilibrati che includano proteine, carboidrati e grassi sani per supportare il tuo metabolismo.
+          </p>
+        </div>
+        <div 
+        data-aos="fade-left"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
+        class="bg-green-200 p-4 rounded-lg shadow text-black">
+          <h3 class="font-semibold text-lg mb-2">2. Mantieniti Attivo</h3>
+          <p>
+            Aumenta la massa muscolare attraverso l'allenamento con i pesi: più muscoli hai, più alto sarà il tuo metabolismo.
+          </p>
+        </div>
+        <div 
+        data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
+        class="bg-green-200 p-4 rounded-lg shadow text-black">
+          <h3 class="font-semibold text-lg mb-2">3. Dormi Bene</h3>
+          <p>
+            Il sonno di qualità aiuta a regolare gli ormoni legati al metabolismo e alla fame.
+          </p>
+        </div>
+        <div
+        data-aos="fade-left"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
+        class="bg-green-200 p-4 rounded-lg shadow text-black">
+          <h3 class="font-semibold text-lg mb-2">4. Idratazione</h3>
+          <p>
+            Bere abbastanza acqua favorisce il corretto funzionamento del metabolismo.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="flex text-black flex-col bg-[#E8EDDF]">
+    <div 
+    data-aos="fade-down"
+    data-aos-easing="linear"
+    data-aos-duration="1500"
+    class="relative pt-5 overflow-hidden">
+      <img class="absolute w-[600px] md:w-[430px] xl:w-[700px] bottom-0 -right-20" src="Images/footer.png" alt="">
+      <img class="size-16 mb-20 mt-20 rounded-full mx-10" src="Images/Logo1.png" alt="" />
+      <div class="mb-20 px-10">
+        <span class="font-krona text-[9px]">
+          <a class="font-semibold" href="index.html">EVOLVING-FITNESS.COM</a> / SERVIZIO CLIENTI / NOTE LEGALI E PRIVACY / POLITICA SUI COOKIE
+        </span>
+      </div>
+      <div class="flex flex-col md:grid md:grid-cols-2 gap-y-12 justify-between z-10 mb-20 px-10 lg:flex lg:flex-row">
+        <div class="w-60 lg:w-44 xl:w-60">
+          <span class="hover:font-semibold"><a href="prodotti.html">I NOSTRI PRODOTTI</a></span>
+          <ul class="mt-5 font-semibold text-sm hover:font-extrabold">
+            <li><a href="index.html">EVOLVING FITNESS</a></li>
+          </ul>
+        </div>
+        <div class="w-80 xl:w-80">
+          <span>INFORMAZIONI AZIENDALI</span>
+          <ul class="mt-5 font-semibold text-sm leading-7">
+            <li class="hover:font-extrabold">
+              <a href="">LAVORA CON EVOLVING FITNESS</a>
+            </li>
+            <li class="hover:font-extrabold">
+              <a href="chisiamo.html">SUL GRUPPO EVOLVING FITNESS</a>
+            </li>
+            <li class="hover:font-extrabold">
+              <a href="">SOSTENIBILITÀ DEL GRUPPO EVOLVING FITNESS</a>
+            </li>
+            <li class="hover:font-extrabold">
+              <a href="">MATERIALI STAMPA</a>
+            </li>
+            <li class="hover:font-extrabold">
+              <a href="">RELAZIONI CON GLI INVESTITORI</a>
+            </li>
+            <li class="hover:font-extrabold">
+              <a href="">GOVERNANCE AZIENDALE</a>
+            </li>
+          </ul>
+        </div>
+        <div class="w-64 z-10 lg:w-60 xl:w-64">
+          <span>AIUTO</span>
+          <ul class="mt-5 font-semibold text-sm leading-7">
+            <li class="hover:font-extrabold">
+              <a href="contatti.html">SERVIZIO CLIENTI</a>
+            </li>
+            <li class="hover:font-extrabold">
+              <a href="contatti.html">TROVA IL NOSTRO NEGOZIO</a>
+            </li>
+            <li class="hover:font-extrabold">
+              <a href="">NOTE LEGALI E PRIVACY</a>
+            </li>
+            <li class="hover:font-extrabold">
+              <a href="">CARTA REGALO</a>
+            </li>
+            <li class="hover:font-extrabold">
+              <a href="">POLITICA SUI COOKIE</a>
+            </li>
+            <li class="hover:font-extrabold">
+              <a href="">IMPOSTAZIONI DEI COOKIE</a>
+            </li>
+          </ul>
+        </div>
+        <div class="w-60 bg-[#CFDBD5] z-10 shadow-2xl flex flex-col p-5 rounded-lg lg:w-60 xl:w-72">
+          <span class="hover:font-semibold"><a href="contatti.html">ISCRIVITI ORA</a></span>
+          <p class="mt-5 mb-5">
+            Offerta di benvenuto: 10% di sconto + una sessione gratuita con un coach!
+          </p>
+          <a class="font-semibold hover:font-extrabold" href="contatti.html">SCOPRI DI PIÙ</a>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col justify-between text-center h-28 md:h-24 py-5 gap-2 items-center bg-[#333533] text-white px-10 lg:flex-row lg:justify-between">
+      <div>
+        <p class="text-[10px] lg:text-[12px]">
+          Il contenuto di questo sito web è protetto da copyright ed è di proprietà di Franck Emmanuel N.D. 2024
+        </p>
+      </div>
+      <div class="flex gap-6">
+        <img class="size-5 cursor-pointer transition-transform ease-out duration-[0.5s] hover:scale-[1.3]" title="Canale facrbook" src="images/icons8-facebook-entouré-48.png" alt="icona facebook"/>
+        <img class="size-5 cursor-pointer transition-transform ease-out duration-[0.5s] hover:scale-[1.3]" title="Canale Instagram" src="images/icons8-instagram-48.png" alt="icona instagram"/>
+        <img class="size-5 cursor-pointer transition-transform ease-out duration-[0.5s] hover:scale-[1.3]" title="Canale Twitter" src="images/icons8-twitterx-48.png" alt="icona x"/>
+        <img class="size-5 cursor-pointer transition-transform ease-out duration-[0.5s] hover:scale-[1.3]" title="Canale tik tok" src="images/icons8-tic-tac-100.png" alt="icona tik tok"/>
+      </div>
+    </div>
+  </footer>
+ 
+  <script src="loader.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+  <script src="menu.js"></script>
+</body>
+</html>
