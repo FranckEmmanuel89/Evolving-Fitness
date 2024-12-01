@@ -2,31 +2,31 @@
 const articles = [
     {
       title: "Panca Piana: Come Eseguirla al Meglio",
-      image: "images/blog3.jpg",
+      image: "Images/blog3.jpg",
       content: "La panca piana è un esercizio fondamentale per costruire un torace forte.Viene praticata sia dai principianti che dai professionisti. Tuttavia, per evitare infortuni e massimizzare i risultati, è fondamentale padroneggiare la tecnica corretta.",
       link: "article1.html"
     },
     {
       title: "Riuscire nella Tua Presa di Massa",
-      image: "images/article2.jpg",
+      image: "Images/article2.jpg",
       content: "La fase di presa di massa è cruciale per chiunque voglia aumentare il proprio volume muscolare. È un processo che richiede un equilibrio tra allenamento efficace, alimentazione bilanciata e un recupero di qualità. Ma come puoi ottimizzare questi elementi?",
       link: "article2.html"
     },
     {
       title: "Ottimizza i Risultati con le Proteine",
-      image: "images/article3.jpg",
+      image: "Images/article3.jpg",
       content: "Le proteine forniscono gli amminoacidi essenziali per riparare le fibre muscolari danneggiate durante l'allenamento. Inoltre, aiutano nella costruzione di nuovi tessuti muscolari, aumentando la forza e il volume dei muscoli.",
       link: "article3.html"
     },
     {
       title: "Metabolismo Basale: Cos'è e Come Calcolarlo",
-      image: "images/article4.jpg",
+      image: "Images/article4.jpg",
       content: "Le proteine forniscono gli amminoacidi essenziali per riparare le fibre muscolari danneggiate durante l'allenamento. Inoltre, aiutano nella costruzione di nuovi tessuti muscolari, aumentando la forza e il volume dei muscoli.",
       link: "article4.html"
     },
     {
       title: "Il Digiuno Intermittente per Perdere Peso",
-      image: "images/digiuno-cover.jpg",
+      image: "Images/digiuno-cover.jpg",
       content: "Il digiuno intermittente è un modello alimentare che alterna periodi di digiuno a periodi in cui si può mangiare. Non è una dieta tradizionale, ma una strategia per ottimizzare l'energia del corpo e favorire la perdita di peso, basandosi su ritmi naturali.",
       link: "article5.html"
     }
